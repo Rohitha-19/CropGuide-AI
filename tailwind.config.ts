@@ -47,6 +47,25 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Agriculture theme colors
+        crop: {
+          green: "hsl(var(--crop-green))",
+        },
+        leaf: {
+          green: "hsl(var(--leaf-green))",
+        },
+        soil: {
+          brown: "hsl(var(--soil-brown))",
+        },
+        harvest: {
+          gold: "hsl(var(--harvest-gold))",
+        },
+        sky: {
+          blue: "hsl(var(--sky-blue))",
+        },
+        warning: {
+          orange: "hsl(var(--warning-orange))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -58,6 +77,10 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        sans: ['Poppins', 'Noto Sans Tamil', 'sans-serif'],
+        tamil: ['Noto Sans Tamil', 'Poppins', 'sans-serif'],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -65,25 +88,31 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "slide-in-bottom": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-in-bottom": "slide-in-bottom 0.5s ease-out",
+      },
+      boxShadow: {
+        'agriculture': '0 8px 30px -10px hsl(142 55% 32% / 0.2)',
+        'agriculture-lg': '0 20px 50px -15px hsl(142 55% 32% / 0.25)',
       },
     },
   },
